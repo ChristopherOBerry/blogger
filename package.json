@@ -1,0 +1,24 @@
+{
+  "name": "blogger",
+  "version": "1.0.0",
+  "description": "blogger project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherOBerry/blogger.git"
+  },
+  "author": "chroberry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristopherOBerry/issues"
+  },
+  "homepage": "https://github.com/ChristopherOBerry/blogger#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.4"
+  }
+}
