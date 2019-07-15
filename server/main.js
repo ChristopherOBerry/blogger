@@ -5,16 +5,16 @@ import "./db/dbconfig"
 let port = 3000
 
 let server = express()
-server.use(bp.json())
+server.use(bp.json({limit:'50mb'}))
 
-import blogController from './controllers/blogController.js'
+import BlogController from './controllers/BlogController.js';
 
-server.use('/api/blogs', new blogController().router)
+server.use('/api/blogs', new BlogController().router)
 
-server.get('/', express.static(__dirname + '/../public'))
+server.use('/', express.static(__dirname + '/../public'))
 
 server.use((error,req, res, next)=> {
-    res.status(eror.status || 400).send(error)
+    res.status(error.status || 400).send(error)
 })
 
 server.listen(port, () => {
